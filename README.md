@@ -1,5 +1,9 @@
-# 🦜🔗 Autonomous Agents with LangChain
-This is a repository for our workshop. You'll find the slides (here)[https://slides.com/johann-peterhartmann/autonome-agenten/].
+# 🦜🔗  LangChain & ChatGPT
+
+
+This is a repository for our workshop. You'll find the slides (here)[https://slides.com/maxtharr/langchain-intro].
+
+A lot of the code and some of the slides are from Johanns presentation at CodeTalks: [https://slides.com/johann-peterhartmann/autonome-agenten/].
 
 
 # Setup
@@ -28,20 +32,10 @@ Create an account at [SerpApi](https://serpapi.com/).
 Get the key here: [serpapi.com/manage-api-key](https://serpapi.com/manage-api-key)
 Add it to your .env file.
 
-## Step 4: Create an office application to use office with the agent.
 
-Create an application at [Azure Portal](https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps/CreateApplicationBlade/quickStartType~/null/isMSAApp~/false).
-Select the option "Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)".
-
-Choose "Web" as the platform and use "https://login.microsoftonline.com/common/oauth2/nativeclient" as redirect url.
-Copy the "application (client) id" and add it to the .env file.
-
-Create a new client secret and add it to the .env file, too.
-## Step 5: Use docker to start working
+## Step 4: Use docker to start working
 ```bash
-docker build --rm --tag codetalks23 .
-docker run -it --rm -v `pwd`:/home/jovyan/work -p 8888:8888 codetalks23
-```
+docker run -it --rm -p 8888:8888 -v "${PWD}":/home/jovyan/work jupyter/minimal-notebook:latest    
 # Go! 
 
 The docker output should show you a url that you are able to open.

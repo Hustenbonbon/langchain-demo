@@ -5,6 +5,7 @@ python-dotenv
 google-search-results
 faiss-cpu
 pypdf
+tiktoken
 tqdm
 wikipedia
 arxiv
